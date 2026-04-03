@@ -1,33 +1,43 @@
 $(function(){
 
-    // ENTRADA
+    //ENTRADA
     var botoes = $(".botao");
     var titulo = $("h1");
     var subtitulo = $("#subtitulo");
     var icones = $("svg");
     var fundo = $("body");
+    var botao_modoescuro = $("#modoescuro");
+
+    var modoescuro = false
     
     //PROCESSAMENTO
 
-    
-    titulo.click(()=>{
+    botao_modoescuro.click(()=>{
 
-        botoes.css("background-color","lightblue");
+
+        if (modoescuro == false ){
+
+            botoes.css("background-color", "black");
+            botoes.css("color", "bisque");
+
+            modoescuro = true;
+
+        }else{
+
+            botoes.css("background-color", "rgb(190, 172, 255");
+            botoes.css("color", "blueviolet");
+
+            modoescuro = false;
+
+        }
+
+
+
+
 
     })
 
 
-    titulo.dblclick(()=>{
-
-        fundo.html("<h1> Alterado pelo JS </h1>")
-
-    })
-
-    subtitulo.click(()=>{
-        
-        icones.css("fill","lightblue");
-
-    })
 
     //SAIDA
 
